@@ -15,7 +15,8 @@ function bar(){
   document.querySelector('h4').innerText='Ingredients '
   document.querySelector('body').style.background='none'
   document.querySelector('h1').style.color='black'
-
+  next.style.display='inline'
+  prev.style.display='inline'
   let choiceDrink=document.querySelector('input').value
   let ingredient1=document.querySelector('#ing1')
   let ingredient2=document.querySelector('#ing2')
