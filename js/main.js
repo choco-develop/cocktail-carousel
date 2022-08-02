@@ -74,6 +74,7 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choiceDrink}`)
           slides.src=data.drinks[i].strDrinkThumb
           drinkName.innerText=data.drinks[i].strDrink
           drinkInstructions.innerText=data.drinks[i].strInstructions
+          prev.disabled=true
           ingredient1.innerText=data.drinks[i].strIngredient1
         ingredient2.innerText=data.drinks[i].strIngredient2
         ingredient3.innerText=data.drinks[i].strIngredient3
@@ -109,9 +110,13 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choiceDrink}`)
         ingredient6.innerText=data.drinks[i].strIngredient6
         ingredient7.innerText=data.drinks[i].strIngredient7
         ingredient8.innerText=data.drinks[i].strIngredient8
+        if(i===arr){
+          next.disabled=true
+        }
         }
          else{
           i=0
+          prev.disabled=true
           slides.src=data.drinks[i].strDrinkThumb
           drinkName.innerText=data.drinks[i].strDrink
           drinkInstructions.innerText=data.drinks[i].strInstructions
@@ -127,6 +132,7 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choiceDrink}`)
        }
       
       }
+      
 )
 
 }
