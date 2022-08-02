@@ -9,12 +9,11 @@ document.querySelector('.getDrink').addEventListener('click', bar)
 
 function bar(){
   let i=0
-  slides.scr=""
-  drinkName.innerText=""
-  drinkInstructions.innerText=""
+ 
   document.querySelector('h4').innerText='Ingredients '
-  document.querySelector('body').style.background='none'
-  document.querySelector('h1').style.color='black'
+  document.querySelector('body').style.backgroundImage='none'
+  document.querySelector('body').style.backgroundColor='black'
+  document.querySelector('body').style.color='white'
   next.style.display='inline'
   prev.style.display='inline'
   let choiceDrink=document.querySelector('input').value
@@ -31,6 +30,7 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choiceDrink}`)
     .then(res=>res.json())
     .then(data=>{
       console.log(data.drinks)
+      
       const arr=data.drinks.length-1
         slides.src=data.drinks[i].strDrinkThumb
         drinkName.innerText=data.drinks[i].strDrink
@@ -44,6 +44,17 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choiceDrink}`)
         ingredient7.innerText=data.drinks[i].strIngredient7
         ingredient8.innerText=data.drinks[i].strIngredient8
         next.addEventListener('click', ()=>{
+          slides.src= ""
+          drinkName.innerText=''
+          drinkInstructions.innerText=''
+          ingredient1.innerText=''
+          ingredient2.innerText=''
+          ingredient3.innerText=''
+          ingredient4.innerText=''
+          ingredient5.innerText=''
+          ingredient6.innerText=''
+          ingredient7.innerText=''
+          ingredient8.innerText=''
          i++
          if(i<=arr){
           slides.src=data.drinks[i].strDrinkThumb
@@ -74,6 +85,17 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choiceDrink}`)
         }  
        } )
        prev.addEventListener('click',()=>{
+        slides.src= ""
+        drinkName.innerText=''
+        drinkInstructions.innerText=''
+        ingredient1.innerText=''
+        ingredient2.innerText=''
+        ingredient3.innerText=''
+        ingredient4.innerText=''
+        ingredient5.innerText=''
+        ingredient6.innerText=''
+        ingredient7.innerText=''
+        ingredient8.innerText=''
         i--
          if(i<=arr){
           slides.src=data.drinks[i].strDrinkThumb
@@ -103,6 +125,7 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choiceDrink}`)
         ingredient8.innerText=data.drinks[i].strIngredient8
 
        }
+      
       }
 )
 
