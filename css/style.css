@@ -118,6 +118,9 @@
     
    
     }
+    button#previous,button#next{
+      width: 4rem;
+    }
    
   }
  
