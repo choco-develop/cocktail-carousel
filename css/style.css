@@ -2,7 +2,7 @@
 /* CSS
 /*******************************************/
 
-/* Box Model Hack */
+
 
 * {
     box-sizing: border-box;
@@ -25,11 +25,7 @@
     font-size: 62%;
     height:100vh; 
     background-color:#cbacac;
-    background-image: url(../cockDB.jpg);
-    background-position: center center;
-    background-repeat: no-repeat no-repeat;
-    background-attachment: scroll;
-    background-size: cover;
+   
 
   }
   
@@ -75,17 +71,6 @@
         opacity: 0.5;
       }
     
-  @media screen and (max-width){
-      img{
-        width: 100%;
-      }  
-      input{
-        width: 60%;
-        padding:2%
-      } 
-      .getDrink{
-        width:40%
-      } 
-  }
   
+ 
   
