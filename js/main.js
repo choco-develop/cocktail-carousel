@@ -110,9 +110,7 @@ fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${choiceDrink}`)
         ingredient6.innerText=data.drinks[i].strIngredient6
         ingredient7.innerText=data.drinks[i].strIngredient7
         ingredient8.innerText=data.drinks[i].strIngredient8
-        if(i===arr){
-          next.disabled=true
-        }
+        
         }
          else{
           i=0
